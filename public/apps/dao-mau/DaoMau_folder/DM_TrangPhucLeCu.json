@@ -1,0 +1,62 @@
+﻿[
+    {
+        "Ma": "DM_TrangPhuc_MauDo_1",
+        "ChuThich": "Giá hầu Quan lớn Đệ Nhất"
+    },
+    {
+        "Ma": "DM_TrangPhuc_MauVang_1",
+        "ChuThich": "Giá hầu Chầu Tám Bát Nàn"
+    },
+    {
+        "Ma": "DM_TrangPhuc_MauTrang_1",
+        "ChuThich": "Giá hầu Quan lớn Đệ Tam"
+    },
+    {
+        "Ma": "DM_TrangPhuc_MauXanh_1",
+        "ChuThich": "Giá hầu Quan lớn Đệ Nhị"
+    },
+    {
+        "Ma": "DM_TrangPhuc_MauDuong_1",
+        "ChuThich": "Giá hầu Quan lớn Đệ Ngũ"
+    },
+    {
+        "Ma": "DM_LeCu_Khan_1",
+        "ChuThich": "Cô đồng lật khăn phủ diện trong buổi hầu giá Quan lớn Đệ Nhất"
+    },
+    {
+        "Ma": "DM_LeCu_Quat_1",
+        "ChuThich": "Cô đồng sử dụng quạt để hầu giá Chầu Đệ Nhị"
+    },
+    {
+        "Ma": "DM_LeCu_Goi_1",
+        "ChuThich": "Cô đồng sử dụng gối để kê tay trong buổi hầu giá Quan lớn Đệ Tam"
+    },
+    {
+        "Ma": "DM_LeCu_MaiCheo_1",
+        "ChuThich": "Cậu đồng sử dụng mái chào trong buổi hầu giá Cô Bơ Thoải"
+    },
+    {
+        "Ma": "DM_LeCu_Dao1_1",
+        "ChuThich": "Cô đồng sử dụng đao lớn trong buổi hầu giá Quan lớn Đệ Ngũ"
+    },
+    {
+        "Ma": "DM_LeCu_CoTo_1",
+        "ChuThich": "Cậu đồng sử dụng cờ to trong buổi hầu giá Ông Hoàng Mười"
+    },
+    {
+        "Ma": "DM_LeCu_CoNho_1",
+        "ChuThich": "Cô đồng dùng đôi cờ nhỏ đeo sau lưng trong khi múa kiếm hầu giá Chầu Tám Bát Nàn"
+    },
+    {
+        "Ma": "DM_LeCu_Kiem_1",
+        "ChuThich": "Cô đồng sử đụng kiếm trong khi hầu giá Quan lớn Đệ Tam"
+    },
+    {
+        "Ma": "DM_LeCu_Heo_1",
+        "ChuThich": "Cô đồng sử dụng dôi hèo để múa trong khi hầu giá Ông Hoàng Bảy"
+    },
+    {
+        "Ma": "DM_LeCu_Hop_1",
+        "ChuThich": "Hôp trang sức được chuẩn bị trược cho một buổi hầu đồng"
+    }
+]

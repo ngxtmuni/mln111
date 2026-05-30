@@ -1,0 +1,11 @@
+app/page.tsx(326,19): error TS2353: Object literal may only specify known properties, and 'whileHover' does not exist in type 'Transition<any>'.
+components/artist-detail-client.tsx(105,38): error TS7006: Parameter 'work' implicitly has an 'any' type.
+components/community-gallery.tsx(3,21): error TS7016: Could not find a declaration file for module 'react-responsive-masonry'. 'D:/Khoa Lee/IT/PM/ketnoidisan/frontend-web/node_modules/.pnpm/react-responsive-masonry@2.7.1/node_modules/react-responsive-masonry/lib/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react-responsive-masonry` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-responsive-masonry';`
+components/login-form.tsx(20,11): error TS2339: Property 'login' does not exist on type 'AuthContextType'.
+components/mobile-navigation.tsx(41,20): error TS2339: Property 'submenu' does not exist on type '{ href: string; label: string; }'.
+components/mobile-navigation.tsx(48,29): error TS2339: Property 'submenu' does not exist on type '{ href: string; label: string; }'.
+components/mobile-navigation.tsx(48,42): error TS7006: Parameter 'subitem' implicitly has an 'any' type.
+components/signup-form.tsx(59,11): error TS2339: Property 'login' does not exist on type 'AuthContextType'.
+ref/artists/page.tsx(4,24): error TS2307: Cannot find module '@/components/artist-card' or its corresponding type declarations.
+ref/artists/page.tsx(5,23): error TS2307: Cannot find module '@/components/blank-hero' or its corresponding type declarations.

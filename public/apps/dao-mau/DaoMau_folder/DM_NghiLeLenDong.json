@@ -1,0 +1,38 @@
+﻿[
+    {
+        "TrinhTuLenDong": "Thay lễ phục",
+        "Ma": "DM_LenDong_ThayLePhuc",
+        "NoiDung": "Mỗi vị Thánh đều có lễ phục riêng phù hợp với danh hiệu của vị đó và màu sắc cũng khác biệt tùy từng phủ, từng gốc tích sắc tộc gốc, phẩm hàm cũng như văn hay võ. Trong một buổi hầu, thanh đồng thường có hai hoặc bốn người phụ việc thay trang phục và dâng đồ.",
+        "Anh": "5"
+    },
+    {
+        "TrinhTuLenDong": "Dâng hương hành lễ",
+        "Ma": "DM_LenDong_DangHuongHanhLe",
+        "NoiDung": "Dâng hương hành lễ là nghi thức không thể thiếu trong mỗi giá đồng. Hầu đồng tay trái cầm một bó nhang đã đốt sẵn, bọc trong một chiếc khăn (khăn tấu) có tẩm hương. Tay phải rút một nén nhang rồi huơ lên bó nhang trong tay làm động tác phù phép, mà ngôn ngữ hầu đồng gọi là khai nông, để xua đuổi tà ma.",
+        "Anh": "5"
+    },
+    {
+        "TrinhTuLenDong": "Lễ Thánh giáng",
+        "Ma": "DM_LenDong_LeThanhGiang",
+        "NoiDung": "Khi hầu đồng có Thánh nhập vào thì buông các nén hương đang cầm theo tay chắp, nghiêng mình ra hiệu cho hầu dâng và cung văn Thánh thuộc hạng thứ bậc nào. Có hai hình thức thánh giáng: Giáng trùm khăn (hầu tráng mạn) với các giá Thánh Mẫu, Mẫu chỉ đến chứng giám rồi đi ngay; và Giáng mở khăn với các hàng Quan trở xuống. Khi Thánh đã nhập, người hầu đồng không còn là người phàm nữa, xuất thần, tự thôi miên đã giúp họ nhảy múa một cách uyển chuyển, nhịp nhàng. Đó chính là hứng khởi mang tính tâm linh tôn giáo.",
+        "Anh": "5"
+    },
+    {
+        "TrinhTuLenDong": "Múa đồng",
+        "Ma": "DM_LenDong_MuaDong",
+        "NoiDung": "Múa đồng là một hình thức diễn xướng đã được cách điểm hóa, khẳng định sự ứng nhập của thần linh. Bởi vậy, động tác múa khác nhau tùy theo từng vị Thánh, phản ánh con người thật của vị Thánh giáng đồng. Khi múa đồng, ông đồng bà cốt sử dụng một số lễ cục như: kiếm, đao, gậy, mái chèo, quạt hay cờ… Trước khi sử dụng lễ cụ, người hầu đồng bắt chéo hai dụng cụ lên trước trán, sau đó cúi đầu làm lễ; múa xong một giá lại bắt chéo hai lễ cụ trước trán để tạ lễ.",
+        "Anh": "5"
+    },
+    {
+        "TrinhTuLenDong": "Ban lộc và nghe văn chầu",
+        "Ma": "DM_LenDong_BanLoc",
+        "NoiDung": "Sau khi đã múa, các Thánh thường ngồi nghe cung văn hát, kể sự tích lai lịch vị Thánh đang giáng. Với các giá Ông Hoàng thì cung văn ngâm các bài thơ cổ. Thánh biểu hiện sự hài lòng bằng động tác vỗ gối và thưởng tiền cho cung văn. Đây cũng là lúc Thánh dùng những thứ người hầu đồng dâng như: rượu, thuốc lá, trầu, nước..., tất cả đều được làm nghi thức khai quang (dùng một cây nhang đang cháy làm dấu điểm chỉ vào) cho thanh sạch. Người hầu dâng nhanh chóng che quạt cho Thánh thụ lộc. Lúc này, những người ngồi dự xung quanh đến gần để cầu xin hoặc nghe Thánh phán truyền. Và đây cũng là lúc Thánh phát lộc, gồm: hoa quả, bánh trái, gương lược, tiền bạc, nén nhang cháy...",
+        "Anh": "5"
+    },
+    {
+        "TrinhTuLenDong": "Thánh giá hồi cung",
+        "Ma": "DM_LenDong_ThanhThang",
+        "NoiDung": "Khi đã múa và ban lộc, phán truyền xong xuôi cũng là lúc Thánh thăng và kết thúc giá hầu. Thanh đồng ngồi yên, hai tay bắt chéo trước trán, quạt che lên đỉnh đầu, khẽ rung mình; lúc ấy hai người phụ hầu đồng cấp tốc phủ khăn diện lên đầu thanh đồng, cung văn nổi nhạc và hát điệu Thánh xa giá hồi cung.",
+        "Anh": "5"
+    }
+]

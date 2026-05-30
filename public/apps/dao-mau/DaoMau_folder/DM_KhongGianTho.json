@@ -1,0 +1,38 @@
+﻿[
+    {
+        "Text": "cổng tam (hoặc ngũ) quan",
+        "Ten": "Tam quan",
+        "Ma": "DM_KhongGianTho_TamQuan",
+        "NoiDung": "Ngôi đền nào cũng có Tam quan. Ở cổng chính xây bốn hoặc tám mái, bên trên có cuốn thư đắp theo lối ngũ cung: ở giữa là tên hiệu của đền, hai bên là hai chiện tàu, hai cung ngoài cùng hất lên và cuốn lại. Tường bên tả đắp cuốn kiếm, bên hữu đắp cuốn bút. Hai bên cuốn thư là hai ngọn đăng, trên hai ngọn đăng là tám phượng chầu (mỗi bên bốn phượng, quay bốn hướng). Hai cổng phụ xây hai mái, mỗi bên có một trụ ngoài cùng, trên mỗi trụ có một Kỳ lân phục."
+    },
+    {
+        "Text": "tòa Sơn Trang",
+        "Ten": "Động Sơn Trang",
+        "Ma": "DM_KhongGianTho_DongSonTrang",
+        "NoiDung": "Tại hầu hết đền, phủ đều có cung thờ Sơn Trang, hay còn gọi là động Sơn Trang. Động Sơn Trang thường được bài trí là một động đá có Chúa Sơn Trang và các Cô Sơn Trang ngự. Chúa Sơn Trang thờ tại đây được coi là hiện thân của Mẫu Thượng Ngàn. Ban Sơn Trang chia làm 12 chốn Mán, 12 chốn Mường, 12 chốn man di Thổ tộc, gọi là \"tam thập lục động sơn lâm sơn trang\". Dưới Mẫu là các Hội Đồng Chúa (Hội Đồng Chúa Bói, Chúa Chữa, Chúa Mán, Chúa Mường...). Trong các Hội Đồng này thường có ba vị Chúa Bà đứng đầu theo hàng Đệ Nhất, Đệ Nhị, Đệ Tam. Ngoài ra, theo hầu Mẫu còn có Bát Bộ Sơn Trang (8 tướng nam) và Thập Nhị Bộ Tiên Cô."
+    },
+    {
+        "Text": "lầu Cô, lầu Cậu",
+        "Ten": "Lầu Cô, Lầu Cậu",
+        "Ma": "DM_KhongGianTho_LauCoLauCau",
+        "NoiDung": "Lầu Cô, Lầu Cậu nằm ở bên ngoài và tọa lạc hai bên trái, phải của phủ hay điện thờ chính. Lầu Cô thờ các vị Thánh Cô, Lầu Cậu thờ các vị Thánh Cậu, đây đều là những vị hầu cận của hàng Thánh Mẫu, Quan Lớn, Chầu Bà, Ông Hoàng. Trong mỗi Lầu có thể thờ tượng của một hay nhiều vị. Tại các đền thờ Mẫu, thờ Chầu, Cô hay các Quan Lớn thì trong Lầu Cậu thường thờ Cậu Bé Bản Đền."
+    },
+    {
+        "Text": "Cung ngoài",
+        "Ten": "Cung ngoài",
+        "Ma": "DM_KhongGianTho_CungNgoai",
+        "NoiDung": "Cung ngoài thờ Tam giới Chúa Tiên: Vua Cha Ngọc Hoàng,  Diêm Vương, Nam Tào Bắc Đẩu, Long Vương. Theo lối xưa, đây là cung để tiến lễ, tấu sớ."
+    },
+    {
+        "Text": "Cung giữa ",
+        "Ten": "Cung giữa",
+        "Ma": "DM_KhongGianTho_CungGiua",
+        "NoiDung": "Cung giữa là cung có thể hầu đồng. Nếu không gian rộng thì chia làm các ban thờ, nếu không có diện tích thì xếp theo thứ tự từ trên xuống dưới, bao gồm: Hội Đồng Sơn Trang Hội Công Đồng, Hội Đồng Trần Triều, Chúa Sơn Trang, Ngũ Vị Tôn Quan, Tứ phủ Thánh Bà, Thập vị Ông Hoàng, Thập nhị vương Cô. Hạ ban thờ Ngũ Hổ, trên trần thường có đôi Lốt."
+    },
+    {
+        "Text": "Cung trong",
+        "Ten": "Hậu cung",
+        "Ma": "DM_KhongGianTho_HauCung",
+        "NoiDung": "Hậu cung thờ Tam Toà Thánh Mẫu, 2 bên có Chầu Quỳnh, Chầu Quế. Bên dưới Tam Toà Thánh Mẫu có khi còn thờ một vị chính đền. Trong cung này không được hầu đồng."
+    }
+]

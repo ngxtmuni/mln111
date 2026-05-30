@@ -1,0 +1,687 @@
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/projects" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{rsc:{...}, ...}}>
+                    <__next_viewport_boundary__>
+                    <MetadataWrapper>
+                      <div
+                        hidden={true}
+-                       bis_skin_checked="1"
+                      >
+                    ...
+                  ...
+                    <RootLayout>
+                      <html lang="vi" suppressHydrationWarning={true}>
+                        <head>
+                        <body className="noto_sans_..." suppressHydrationWarning={true}>
+                          ...
+                            <FirebaseActionHandler>
+                            <Navigation>
+                              <header className="fixed top-...">
+                                <div
+                                  className="w-full max-w-6xl border rounded-full transition-all duration-300 border-t..."
+-                                 bis_skin_checked="1"
+                                >
+                                  <div
+                                    className="flex justify-between items-center px-6 py-1"
+-                                   bis_skin_checked="1"
+                                  >
+                                    <LinkComponent>
+                                    <div
+                                      className="hidden md:flex items-center gap-1 flex-1 justify-center"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <div
+                                        className="relative group"
+-                                       bis_skin_checked="1"
+                                      >
+                                      <div
+                                        className="relative group"
+-                                       bis_skin_checked="1"
+                                      >
+                                      <div
+                                        className="relative group"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <button>
+                                        <div
+                                          className="absolute left-1/2 -translate-x-1/2 mt-2 w-48 border border-zinc-8..."
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="py-1"
+-                                           bis_skin_checked="1"
+                                          >
+                                      <div
+                                        className="relative group"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <button>
+                                        <div
+                                          className="absolute left-1/2 -translate-x-1/2 mt-2 w-48 border border-zinc-8..."
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="py-1"
+-                                           bis_skin_checked="1"
+                                          >
+                                      <div
+                                        className="relative group"
+-                                       bis_skin_checked="1"
+                                      >
+                                      <div
+                                        className="relative group"
+-                                       bis_skin_checked="1"
+                                      >
+                                    <div
+                                      className="hidden md:flex items-center gap-3 flex-shrink-0"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <LinkComponent>
+                                      <LinkComponent href="/signup">
+                                        <a ref={function} onClick={function onClick} onMouseEnter={function onMouseEnter} ...>
+                                          <div
+                                            className="p-[1px] rounded-full bg-gradient-to-bl from-white via-black to-..."
+-                                           bis_skin_checked="1"
+                                          >
+                                    ...
+                          ...
+                            <ProjectsPage params={Promise} searchParams={Promise}>
+                              <main className="min-h-scre...">
+                                <ParallaxHero title={<span>} description={<Fragment>} textMainClass="text-[#393..." ...>
+                                  <div
+                                    className="relative bg-black"
+-                                   bis_skin_checked="1"
+                                  >
+                                    <motion.div ref={{current:null}} className="fixed top-..." style={{y:{...}, ...}}>
+                                      <div
+                                        className="fixed top-0 left-0 w-full h-dvh z-0"
+                                        style={{opacity:1,transform:"none"}}
+                                        ref={function useMotionRef.useCallback}
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="absolute inset-0 z-0"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <GradientBlinds gradientColors={[...]} blindCount={15} spotlightOpacity={0.3} ...>
+                                            <div
+                                              ref={{current:null}}
+                                              className="gradient-blinds-container undefined"
+                                              style={{mixBlendMode:"lighten"}}
+-                                             bis_skin_checked="1"
+                                            >
+                                        <div
+                                          className="relative z-10 h-full"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <HeroPoster title={<span>} description={<Fragment>} ...>
+                                            <section className="w-full h-d...">
+                                              <div
+                                                className="absolute inset-0 bg-black/30 z-10"
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="absolute inset-0 z-20 flex items-center justify-center"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="text-center px-4 max-w-7xl mx-auto"
+-                                                 bis_skin_checked="1"
+                                                >
+                                    <div
+                                      className="relative z-10"
+                                      style={{marginTop:"100dvh"}}
+-                                     bis_skin_checked="1"
+                                    >
+                                      <motion.div style={{y:{...}}} className="bg-black r...">
+                                        <div
+                                          className="bg-black rounded-t-3xl -mt-12 md:-mt-24 pt-12"
+                                          style={{transform:"none"}}
+                                          ref={function useMotionRef.useCallback}
+-                                         bis_skin_checked="1"
+                                        >
+                                          <ProjectInfoSection>
+                                            <section className="bg-black p...">
+                                              <div
+                                                className="container mx-auto max-w-6xl"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="grid md:grid-cols-12 gap-8 md:gap-12"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <motion.div initial={{opacity:0,x:-30}} whileInView={{opacity:1,x:0}} ...>
+                                                    <div
+                                                      className="relative md:col-span-5"
+                                                      style={{opacity:0,transform:"translateX..."}}
+                                                      ref={function useMotionRef.useCallback}
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <div
+                                                        className="relative p-4"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                        <div
+                                                          className="absolute top-0 left-0 w-12 h-12 border-t-2 border..."
+-                                                         bis_skin_checked="1"
+                                                        >
+                                                        <div
+                                                          className="absolute top-0 right-0 w-12 h-12 border-t-2 borde..."
+-                                                         bis_skin_checked="1"
+                                                        >
+                                                        <div
+                                                          className="absolute bottom-0 left-0 w-12 h-12 border-b-2 bor..."
+-                                                         bis_skin_checked="1"
+                                                        >
+                                                        <div
+                                                          className="absolute bottom-0 right-0 w-12 h-12 border-b-2 bo..."
+-                                                         bis_skin_checked="1"
+                                                        >
+                                                        <div
+                                                          className="relative aspect-[4/3] rounded-lg overflow-hidden"
+-                                                         bis_skin_checked="1"
+                                                        >
+                                                  <motion.div initial={{opacity:0,x:30}} whileInView={{opacity:1,x:0}} ...>
+                                                    <div
+                                                      className="space-y-6 bg-[#EEF2FF] p-8 rounded-2xl shadow-xl h-fu..."
+                                                      style={{opacity:0,transform:"translateX..."}}
+                                                      ref={function useMotionRef.useCallback}
+-                                                     bis_skin_checked="1"
+                                                    >
+                                            <section className="bg-black p...">
+                                              <div
+                                                className="container mx-auto max-w-6xl"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="grid md:grid-cols-12 gap-8 md:gap-12"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <motion.div initial={{opacity:0,x:-30}} whileInView={{opacity:1,x:0}} ...>
+                                                    <div
+                                                      className="space-y-6 bg-[#EEF2FF] p-8 rounded-2xl shadow-xl h-fu..."
+                                                      style={{opacity:0,transform:"translateX..."}}
+                                                      ref={function useMotionRef.useCallback}
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <h2 className="text-2xl m..." suppressHydrationWarning={true}>
+                                                        <div
+                                                          className="text-left"
+-                                                         bis_skin_checked="1"
+                                                        >
+                                                        <div
+                                                          className="text-right"
+-                                                         bis_skin_checked="1"
+                                                        >
+                                                      ...
+                                                  <motion.div initial={{opacity:0,x:30}} whileInView={{opacity:1,x:0}} ...>
+                                                    <div
+                                                      className="relative md:col-span-5"
+                                                      style={{opacity:0,transform:"translateX..."}}
+                                                      ref={function useMotionRef.useCallback}
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <div
+                                                        className="relative p-4"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                        <div
+                                                          className="absolute top-0 left-0 w-12 h-12 border-t-2 border..."
+-                                                         bis_skin_checked="1"
+                                                        >
+                                                        <div
+                                                          className="absolute top-0 right-0 w-12 h-12 border-t-2 borde..."
+-                                                         bis_skin_checked="1"
+                                                        >
+                                                        <div
+                                                          className="absolute bottom-0 left-0 w-12 h-12 border-b-2 bor..."
+-                                                         bis_skin_checked="1"
+                                                        >
+                                                        <div
+                                                          className="absolute bottom-0 right-0 w-12 h-12 border-b-2 bo..."
+-                                                         bis_skin_checked="1"
+                                                        >
+                                                        <div
+                                                          className="relative aspect-[4/3] rounded-lg overflow-hidden"
+-                                                         bis_skin_checked="1"
+                                                        >
+                                          <section className="bg-black p...">
+                                            <div
+                                              className="container mx-auto max-w-6xl"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <motion.h2>
+                                              <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} ...>
+                                                <div
+                                                  style={{opacity:0,transform:"translateY..."}}
+                                                  ref={function useMotionRef.useCallback}
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <RegionTimeline regions={[...]}>
+                                                    <div
+                                                      className="relative"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <div
+                                                        className="absolute left-1.5 top-1.5 bottom-1.5 w-px bg-zinc-5..."
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                      <div
+                                                        className="space-y-6"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                        <motion.div initial={{opacity:0,y:20}} ...>
+                                                          <div
+                                                            className="grid grid-cols-1 md:grid-cols-[140px_1fr] gap-4..."
+                                                            style={{opacity:0,transform:"translateY..."}}
+                                                            ref={function useMotionRef.useCallback}
+-                                                           bis_skin_checked="1"
+                                                          >
+                                                            <div
+                                                              className="relative flex items-start gap-3"
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                              <div
+                                                                className="w-3 h-3 rounded-full bg-primary shrink-0 z-10"
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                              ...
+                                                            <div
+                                                              className="rounded-lg p-6 md:p-8"
+                                                              style={{backgroundColor:"#EEF2FF"}}
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                        <motion.div initial={{opacity:0,y:20}} ...>
+                                                          <div
+                                                            className="grid grid-cols-1 md:grid-cols-[140px_1fr] gap-4..."
+                                                            style={{opacity:0,transform:"translateY..."}}
+                                                            ref={function useMotionRef.useCallback}
+-                                                           bis_skin_checked="1"
+                                                          >
+                                                            <div
+                                                              className="relative flex items-start gap-3"
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                              <div
+                                                                className="w-3 h-3 rounded-full bg-primary shrink-0 z-10"
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                              ...
+                                                            <div
+                                                              className="rounded-lg p-6 md:p-8"
+                                                              style={{backgroundColor:"#C7D2FE"}}
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                        <motion.div initial={{opacity:0,y:20}} ...>
+                                                          <div
+                                                            className="grid grid-cols-1 md:grid-cols-[140px_1fr] gap-4..."
+                                                            style={{opacity:0,transform:"translateY..."}}
+                                                            ref={function useMotionRef.useCallback}
+-                                                           bis_skin_checked="1"
+                                                          >
+                                                            <div
+                                                              className="relative flex items-start gap-3"
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                              <div
+                                                                className="w-3 h-3 rounded-full bg-primary shrink-0 z-10"
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                              ...
+                                                            <div
+                                                              className="rounded-lg p-6 md:p-8"
+                                                              style={{backgroundColor:"#818CF8"}}
+-                                                             bis_skin_checked="1"
+                                                            >
+                                          <DocumentarySection>
+                                            <DriveVideoSection youtubeVideoId="GuZ01wUgj2Y" title="HÀNH TRÌNH..." ...>
+                                              <section className="py-20 bg-b..." ref={{current:null}}>
+                                                <div
+                                                  className="max-w-6xl mx-auto px-4"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} ...>
+                                                    <div
+                                                      className="text-center mb-12"
+                                                      style={{opacity:0,transform:"translateY..."}}
+                                                      ref={function useMotionRef.useCallback}
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <h2>
+                                                      <div
+                                                        className="h-1.5 w-24 bg-[#393ADD] mx-auto rounded-full mb-6"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                  <motion.div initial={{opacity:0,y:30}} whileInView={{opacity:1,y:0}} ...>
+                                                    <div
+                                                      className="relative group"
+                                                      style={{opacity:0,transform:"translateY..."}}
+                                                      ref={function useMotionRef.useCallback}
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <div
+                                                        className="absolute -inset-[1px] bg-gradient-to-br from-[#393A..."
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                      <div
+                                                        ref={{current:null}}
+                                                        className="relative aspect-video rounded-2xl overflow-hidden b..."
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                        <button onClick={function startPlayback} ...>
+                                                          <div
+                                                            className="absolute inset-0 opacity-10"
+-                                                           bis_skin_checked="1"
+                                                          >
+                                                            <div
+                                                              className="absolute h-px w-full bg-[#393ADD]"
+                                                              style={{top:"12.5%"}}
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                            <div
+                                                              className="absolute h-px w-full bg-[#393ADD]"
+                                                              style={{top:"25%"}}
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                            <div
+                                                              className="absolute h-px w-full bg-[#393ADD]"
+                                                              style={{top:"37.5%"}}
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                            <div
+                                                              className="absolute h-px w-full bg-[#393ADD]"
+                                                              style={{top:"50%"}}
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                            <div
+                                                              className="absolute h-px w-full bg-[#393ADD]"
+                                                              style={{top:"62.5%"}}
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                            <div
+                                                              className="absolute h-px w-full bg-[#393ADD]"
+                                                              style={{top:"75%"}}
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                            <div
+                                                              className="absolute h-px w-full bg-[#393ADD]"
+                                                              style={{top:"87.5%"}}
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                            <div
+                                                              className="absolute h-px w-full bg-[#393ADD]"
+                                                              style={{top:"100%"}}
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                          <div
+                                                            className="relative flex flex-col items-center gap-6"
+-                                                           bis_skin_checked="1"
+                                                          >
+                                                            <div
+                                                              className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-[#3..."
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                            <div
+                                                              className="text-center"
+-                                                             bis_skin_checked="1"
+                                                            >
+                                          <motion.section initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} ...>
+                                            <section className="relative p..." style={{opacity:0, ...}} ...>
+                                              <div
+                                                className="grid grid-cols-1 md:grid-cols-12 gap-8"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <motion.div initial={{opacity:0,y:30}} whileInView={{opacity:1,y:0}} ...>
+                                                  <div
+                                                    className="text-white md:col-span-4 flex flex-col md:h-full md:pb-16"
+                                                    style={{opacity:0,transform:"translateY..."}}
+                                                    ref={function useMotionRef.useCallback}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <h2>
+                                                      <div
+                                                        className="mb-8 mt-4"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                    ...
+                                                <motion.div initial={{opacity:0,y:30}} whileInView={{opacity:1,y:0}} ...>
+                                                  <div
+                                                    className="md:col-span-8"
+                                                    style={{opacity:0,transform:"translateY..."}}
+                                                    ref={function useMotionRef.useCallback}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <EventCarousel onEventChange={function bound dispatchSetState}>
+                                                      <div
+                                                        className={"relative "}
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                        <div
+                                                          className="overflow-hidden rounded-2xl"
+                                                          ref={function bound dispatchSetState}
+-                                                         bis_skin_checked="1"
+                                                        >
+                                                          <div
+                                                            className="flex"
+-                                                           bis_skin_checked="1"
+                                                          >
+                                                            <div
+                                                              className="flex-[0_0_100%] min-w-0"
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                              <div
+                                                                className="bg-zinc-900 aspect-video rounded-2xl relati..."
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                            <div
+                                                              className="flex-[0_0_100%] min-w-0"
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                              <div
+                                                                className="bg-zinc-900 aspect-video rounded-2xl relati..."
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                            <div
+                                                              className="flex-[0_0_100%] min-w-0"
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                              <div
+                                                                className="bg-zinc-900 aspect-video rounded-2xl relati..."
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                        <div
+                                                          className="flex items-center gap-6 mt-8"
+-                                                         bis_skin_checked="1"
+                                                        >
+                                                          <div
+                                                            className="flex gap-3"
+-                                                           bis_skin_checked="1"
+                                                          >
+                                                          <div
+                                                            className="flex-1 h-px bg-white/30 relative"
+-                                                           bis_skin_checked="1"
+                                                          >
+                                                            <div
+                                                              className="absolute top-0 left-0 h-full bg-white transit..."
+                                                              style={{width:"33.3333333..."}}
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                          ...
+                                          ...
+                                            <section className="relative m..." style={{...}} ...>
+                                              <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} ...>
+                                                <div
+                                                  className="w-full grid md:grid-cols-3 grid-cols-1 md:h-[100dvh]"
+                                                  style={{opacity:0,transform:"translateY..."}}
+                                                  ref={function useMotionRef.useCallback}
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="bg-[#6F70BE] col-span-1 text-[#E0E7FF] flex flex-col it..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} ...>
+                                                      <div
+                                                        className="text-4xl md:text-[6.5rem] font-extrabold leading-no..."
+                                                        style={{opacity:0,transform:"translateY..."}}
+                                                        ref={function useMotionRef.useCallback}
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                        <TrueFocus sentence="CĂN SỐ" manualMode={false} blurAmount={3} ...>
+                                                          <div
+                                                            className="focus-container"
+                                                            ref={{current:null}}
+-                                                           bis_skin_checked="1"
+                                                          >
+                                                            <span>
+                                                            <span>
+                                                            <motion.div className="focus-frame" ...>
+                                                              <div
+                                                                className="focus-frame"
+                                                                style={{--border-color:"#E0E7FF",--glow-color:"rgba(0, 25..."}}
+                                                                ref={function useMotionRef.useCallback}
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                    <motion.p>
+                                                    <motion.div initial={{opacity:0}} whileInView={{opacity:1}} ...>
+                                                      <div
+                                                        className="text-center mt-8"
+                                                        style={{opacity:0}}
+                                                        ref={function useMotionRef.useCallback}
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                  <div
+                                                    className="col-span-1 relative min-h-[400px] md:min-h-0 overflow-h..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  <div
+                                                    className="col-span-1 bg-[#BEBEFF] text-[#393ADD] flex flex-col it..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                          <StatsSection>
+                                            <section className="relative p...">
+                                              <div
+                                                className="container mx-auto max-w-6xl relative z-10"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <motion.h2>
+                                                <div
+                                                  className="bg-[#393ADD]/60 py-12 md:py-24 px-6 md:px-12 rounded-3xl"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <GradientStatCard value={<Fragment>} label="lượt tương..." index={0}>
+                                                      <motion.div initial={{opacity:0,y:30}} ...>
+                                                        <div
+                                                          className="bg-[#EEF2FF] rounded-2xl p-8 h-full text-center s..."
+                                                          style={{opacity:0,transform:"translateY..."}}
+                                                          ref={function useMotionRef.useCallback}
+-                                                         bis_skin_checked="1"
+                                                        >
+                                                          <div
+                                                            className="text-4xl md:text-5xl font-bold text-[#393ADD] mb-3"
+-                                                           bis_skin_checked="1"
+                                                          >
+                                                          ...
+                                                    <GradientStatCard value={<Fragment>} label="người tham..." index={1}>
+                                                      <motion.div initial={{opacity:0,y:30}} ...>
+                                                        <div
+                                                          className="bg-[#EEF2FF] rounded-2xl p-8 h-full text-center s..."
+                                                          style={{opacity:0,transform:"translateY..."}}
+                                                          ref={function useMotionRef.useCallback}
+-                                                         bis_skin_checked="1"
+                                                        >
+                                                          <div
+                                                            className="text-4xl md:text-5xl font-bold text-[#393ADD] mb-3"
+-                                                           bis_skin_checked="1"
+                                                          >
+                                                          ...
+                                          <Footer>
+                                            <footer className="bg-gradien...">
+                                              <div
+                                                className="container mx-auto max-w-6xl relative z-10"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="flex flex-col md:flex-row justify-between gap-12"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="space-y-4"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <p>
+                                                    <p>
+                                                    <p>
+                                                    <p>
+                                                    <div
+                                                      className="flex items-center gap-4 pt-2"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                  <div
+                                                    className="space-y-4 md:text-right flex flex-col md:items-end"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                    <div
+                                                      className="flex items-center gap-6 pt-4"
+-                                                     bis_skin_checked="1"
+                                                    >
+                          ...
+                            <ToastViewport ref={null} className="fixed top-...">
+                              <DismissableLayerBranch ref={{current:null}} role="region" aria-label="Notificati..." ...>
+                                <Primitive.div role="region" aria-label="Notificati..." tabIndex={-1} style={{...}} ...>
+                                  <div
+                                    role="region"
+                                    aria-label="Notifications (F8)"
+                                    tabIndex={-1}
+                                    style={{pointerEvents:"none"}}
+                                    ref={function}
+-                                   bis_skin_checked="1"
+                                  >
+                          ...
+                  ...
+ 
+    at <unknown> (file://D:/Khoa Lee/IT/PM/ketnoidisan/frontend-web/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+    at runWithFiberInDEV (file://D:/Khoa Lee/IT/PM/ketnoidisan/frontend-web/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at emitPendingHydrationWarnings (file://D:/Khoa Lee/IT/PM/ketnoidisan/frontend-web/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3438:13)
+    at completeWork (file://D:/Khoa Lee/IT/PM/ketnoidisan/frontend-web/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6885:102)
+    at runWithFiberInDEV (file://D:/Khoa Lee/IT/PM/ketnoidisan/frontend-web/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:131)
+    at completeUnitOfWork (file://D:/Khoa Lee/IT/PM/ketnoidisan/frontend-web/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9622:23)
+    at performUnitOfWork (file://D:/Khoa Lee/IT/PM/ketnoidisan/frontend-web/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9557:28)
+    at workLoopConcurrentByScheduler (file://D:/Khoa Lee/IT/PM/ketnoidisan/frontend-web/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9551:58)
+    at renderRootConcurrent (file://D:/Khoa Lee/IT/PM/ketnoidisan/frontend-web/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9534:71)
+    at performWorkOnRoot (file://D:/Khoa Lee/IT/PM/ketnoidisan/frontend-web/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://D:/Khoa Lee/IT/PM/ketnoidisan/frontend-web/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://D:/Khoa Lee/IT/PM/ketnoidisan/frontend-web/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64) (file://D:/Khoa Lee/IT/PM/ketnoidisan/frontend-web/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+[browser] Image with src "/go-chau-thien-hoi.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes (file://D:/Khoa Lee/IT/PM/ketnoidisan/frontend-web/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
+[browser] Image with src "/bac-phuong-tien-sac-hau-chi-troi-nam.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes (file://D:/Khoa Lee/IT/PM/ketnoidisan/frontend-web/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
+[browser] Image with src "/poster.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes (file://D:/Khoa Lee/IT/PM/ketnoidisan/frontend-web/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
+^C

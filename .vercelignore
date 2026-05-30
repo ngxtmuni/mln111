@@ -1,0 +1,17 @@
+# Bỏ qua các tài nguyên cực nặng
+public/apps/dao-mau/DaoMau_folder/Video/
+**/*.mp4
+**/*.fla
+**/*.exe
+**/*.bak
+**/*.zip
+
+# Tạm thời bỏ qua âm thanh nếu dung lượng vẫn quá lớn (nếu app vẫn treo, hãy comment dòng này)
+# public/apps/dao-mau/DaoMau_folder/Sound/*.mp3
+
+# ĐẢM BẢO GIỮ LẠI ẢNH VÀ CODE
+!public/apps/dao-mau/DaoMau_folder/Image/
+!public/apps/dao-mau/DaoMau_folder/Image/**
+!public/apps/dao-mau/DaoMau_folder/*.json
+!public/apps/dao-mau/DaoMau_folder/*.swf
+!public/apps/dao-mau/*.swf

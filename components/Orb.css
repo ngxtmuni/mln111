@@ -1,0 +1,15 @@
+.orb-container {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  display: flex; /* Ensure centering of children */
+  align-items: center;
+  justify-content: center;
+}
+
+.orb-canvas {
+  display: block; /* Remove inline spacing */
+  width: 100%;
+  height: 100%;
+}

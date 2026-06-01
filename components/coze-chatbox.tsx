@@ -29,6 +29,13 @@ export default function CozeChatbox({ onClose }: CozeChatboxProps) {
   const [isLoading, setIsLoading] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
+  useEffect(() => {
+    console.log("💬 [Chat] Chatbox component mounted")
+    return () => {
+      console.log("💬 [Chat] Chatbox component unmounted")
+    }
+  }, [])
+
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
   }
@@ -40,6 +47,8 @@ export default function CozeChatbox({ onClose }: CozeChatboxProps) {
   const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!input.trim()) return
+
+    console.log("🚀 [Chat] Sending message:", input)
 
     const userMessage: Message = {
       id: Date.now().toString(),
@@ -54,6 +63,11 @@ export default function CozeChatbox({ onClose }: CozeChatboxProps) {
 
     try {
       // Call Coze API
+      console.log("📡 [Chat] Calling /api/coze with payload:", {
+        message: input,
+        conversation_id: "default",
+      })
+
       const response = await fetch("/api/coze", {
         method: "POST",
         headers: {
@@ -61,15 +75,20 @@ export default function CozeChatbox({ onClose }: CozeChatboxProps) {
         },
         body: JSON.stringify({
           message: input,
-          conversation_id: "default", // You can use session-based conversation IDs
+          conversation_id: "default",
         }),
       })
 
+      console.log("📦 [Chat] API Response Status:", response.status, response.statusText)
+
       if (!response.ok) {
-        throw new Error("Failed to get response")
+        const errorData = await response.json()
+        console.error("❌ [Chat] API Error Response:", errorData)
+        throw new Error(errorData.error || "Failed to get response")
       }
 
       const data = await response.json()
+      console.log("✅ [Chat] API Success Response:", data)
 
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
@@ -78,13 +97,14 @@ export default function CozeChatbox({ onClose }: CozeChatboxProps) {
         timestamp: new Date(),
       }
 
+      console.log("💬 [Chat] Adding bot message:", botMessage.text)
       setMessages((prev) => [...prev, botMessage])
     } catch (error) {
-      console.error("Error sending message to Coze:", error)
+      console.error("❌ [Chat] Error sending message to Coze:", error)
 
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: "Xin lỗi, có lỗi xảy ra. Vui lòng thử lại.",
+        text: `Xin lỗi, có lỗi xảy ra: ${error instanceof Error ? error.message : "Vui lòng thử lại."}`,
         sender: "bot",
         timestamp: new Date(),
       }
@@ -92,6 +112,7 @@ export default function CozeChatbox({ onClose }: CozeChatboxProps) {
       setMessages((prev) => [...prev, errorMessage])
     } finally {
       setIsLoading(false)
+      console.log("✋ [Chat] Message processing complete")
     }
   }
 

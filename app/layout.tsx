@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { NavigationShell } from "@/components/navigation-shell"
 import { Toaster } from "@/components/ui/toaster"
+import CozeChatWidget from "@/components/coze-chat-widget"
 
 const notoSans = Noto_Sans({
   subsets: ["latin", "vietnamese"],
@@ -73,6 +74,7 @@ export default function RootLayout({
         </NavigationShell>
         <Toaster />
         <Analytics />
+        <CozeChatWidget />
       </body>
     </html>
   )

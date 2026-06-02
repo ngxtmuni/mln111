@@ -1,2 +1,6 @@
+allowBuilds:
+  '@firebase/util': false
+  protobufjs: false
+  sharp: false
 onlyBuiltDependencies:
   - sharp

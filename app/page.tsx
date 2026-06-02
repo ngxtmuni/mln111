@@ -26,6 +26,9 @@ const ChatboxSection = dynamic(() =>
 const ContestSection = dynamic(() =>
   import("@/components/home/contest-section").then((mod) => mod.ContestSection),
 );
+const ReligionIntro = dynamic(() =>
+  import("@/components/home/religion-intro-section").then((mod) => mod.ReligionIntro),
+);
 
 export default function Home() {
   const [activeEvent, setActiveEvent] = useState<CarouselEvent | null>(null);
@@ -49,6 +52,9 @@ export default function Home() {
 
         {/* Mission Section */}
         <MissionSection />
+
+        {/* Core Religion Introduction Section */}
+        <ReligionIntro />
 
         {/* Hero Poster Section */}
         <motion.section

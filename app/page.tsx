@@ -27,7 +27,14 @@ const ContestSection = dynamic(() =>
   import("@/components/home/contest-section").then((mod) => mod.ContestSection),
 );
 const ReligionIntro = dynamic(() =>
-  import("@/components/home/religion-intro-section").then((mod) => mod.ReligionIntro),
+  import("@/components/home/religion-intro-section").then(
+    (mod) => mod.ReligionIntroSection,
+  ),
+);
+const PhylosophySection = dynamic(() =>
+  import("@/components/home/philosophy-section").then(
+    (mod) => mod.PhilosophySection,
+  ),
 );
 
 export default function Home() {
@@ -148,6 +155,8 @@ export default function Home() {
 
         {/* Contest Section */}
         <ContestSection />
+
+        <PhylosophySection />
 
         <Footer />
       </main>

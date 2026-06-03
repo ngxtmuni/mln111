@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 
-export function ReligionIntro() {
+export function ReligionIntroSection() {
   return (
-    <section className="relative py-20 px-4 md:px-12 bg-zinc-950/40 text-white border-t border-b border-zinc-900">
+    <section className="relative py-20 px-4 md:px-12 bg-zinc-950/40 text-white border-b border-zinc-900">
       <div className="container mx-auto max-w-6xl space-y-32">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -18,12 +18,12 @@ export function ReligionIntro() {
               Tín Ngưỡng <br />
               Thờ Mẫu Việt Nam
             </h2>
-            <div className="h-1 w-20 bg-[#393ADD] mt-4" />
+            <div className="h-1 w-20 bg-[#393ADD] mt-4 block" />
           </div>
           <div className="md:col-span-7 text-justify text-zinc-300 text-base md:text-lg leading-relaxed pt-2">
             <p>
               <strong className="text-white">Tín ngưỡng thờ Mẫu</strong> là hệ
-              thành tâm linh bản địa lâu đời của người Việt. Khác với nhiều tôn
+              thống tâm linh bản địa lâu đời của người Việt. Khác với nhiều tôn
               giáo hướng tới thế giới sau cái chết, thờ Mẫu tập trung hoàn toàn
               vào cuộc sống hiện sinh—cầu mong sức khỏe, tài lộc và may mắn ngay
               tại trần gian qua hình tượng người Mẹ vĩ đại.
@@ -80,13 +80,10 @@ export function ReligionIntro() {
           </div>
 
           <div className="flex flex-col items-start lg:col-span-5 order-1 lg:order-2 space-y-4">
-            <div>
-              <h2 className="text-3xl md:text-5xl font-bold text-[#393ADD] uppercase tracking-wide">
-                Cốt Lõi
-              </h2>
-              <div className="h-1 w-12 bg-zinc-700 mt-4" />
-            </div>
-
+            <h2 className="text-3xl md:text-5xl font-bold text-[#393ADD] uppercase tracking-wide">
+              Cốt Lõi
+            </h2>
+            <div className="h-1 w-20 bg-[#393ADD] mt-4 block" />
             <p className="text-justify text-zinc-300 text-base md:text-lg leading-relaxed pt-2">
               Cốt lõi đức tin nằm ở hệ thống{" "}
               <strong className="text-white">Tam Phủ, Tứ Phủ</strong> đại diện
@@ -120,9 +117,9 @@ export function ReligionIntro() {
               <h2 className="text-3xl md:text-5xl font-bold text-[#393ADD] uppercase tracking-wide">
                 Nguồn Cội
               </h2>
-              <div className="h-1 w-12 bg-zinc-700 mt-4" />
+              <div className="h-1 w-20 bg-[#393ADD] mt-4 block" />
             </div>
-            <div className="md:col-span-7 text-justify text-zinc-300 text-base md:text-lg leading-relaxed pt-2 space-y-6">
+            <div className="md:col-span-7 text-justify text-zinc-300 text-base md:text-lg leading-relaxed pt-2">
               <p>
                 Hệ thống thần linh của Tứ Phủ chính là sự "lịch sử hóa" các vị
                 anh hùng, nghĩa sĩ ngoài đời thật có công đánh đuổi giặc ngoại

@@ -1,8 +1,22 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function PhilosophySection() {
+  const [openCards, setOpenCards] = useState<{ [key: string]: boolean }>({
+    nhacPhu: false,
+    thoaiPhu: false,
+    diaPhu: false,
+  });
+
+  const toggleCard = (cardId: string) => {
+    setOpenCards((prevState) => ({
+      ...prevState,
+      [cardId]: !prevState[cardId],
+    }));
+  };
+
   return (
     <section
       id="triet-hoc"
@@ -48,58 +62,150 @@ export function PhilosophySection() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* THẺ 1: NÚI RỪNG */}
-              <div className="relative h-[360px] rounded-2xl overflow-hidden border border-zinc-900 bg-zinc-900/20 p-6 flex flex-col justify-between group">
-                <div className="absolute inset-0 bg-[url('/phong-canh-nui.png')] bg-cover bg-center opacity-10 mix-blend-luminosity transition-opacity duration-500 group-hover:opacity-20 pointer-events-none" />
+              <div
+                onClick={() => toggleCard("nhacPhu")}
+                className={`relative h-[360px] rounded-2xl overflow-hidden border p-6 flex flex-col justify-between cursor-pointer select-none transition-all duration-500 ${
+                  openCards.nhacPhu
+                    ? "border-[#393ADD] bg-zinc-900/60"
+                    : "border-zinc-900 bg-zinc-900/20 hover:border-zinc-800"
+                }`}
+              >
+                <div
+                  className={`absolute inset-0 bg-[url('/phong-canh-nui.png')] bg-cover bg-center transition-all duration-500 pointer-events-none ${
+                    openCards.nhacPhu
+                      ? "opacity-10 mix-blend-luminosity"
+                      : "opacity-40"
+                  }`}
+                />
+
                 <div className="relative z-10 space-y-3">
-                  <span className="text-xs font-bold text-[#393ADD] tracking-widest uppercase">
+                  <span className="text-xs font-bold text-[#393ADD] tracking-widest uppercase block">
                     Nhạc Phủ
                   </span>
-                  <p className="text-zinc-300 text-xs md:text-sm leading-relaxed text-justify">
-                    Đại diện bởi miền rừng núi (Mẫu Thượng Ngàn). Việc tôn thờ
-                    không gian này cho thấy người Việt cổ nhìn nhận tự nhiên như
-                    một chỉnh thể sống động, có linh hồn và ẩn chứa sức mạnh chở
-                    che, nuôi dưỡng con người qua bao thế hệ.
-                  </p>
+
+                  <AnimatePresence mode="wait">
+                    {openCards.nhacPhu && (
+                      <motion.p
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        transition={{ duration: 0.3 }}
+                        className="text-zinc-300 text-xs md:text-sm leading-relaxed text-justify"
+                      >
+                        Đại diện bởi miền rừng núi (Mẫu Thượng Ngàn). Việc tôn
+                        thờ không gian này cho thấy người Việt cổ nhìn nhận tự
+                        nhiên như một chỉnh thể sống động, có linh hồn và ẩn
+                        chứa sức mạnh chở che, nuôi dưỡng con người qua bao thế
+                        hệ.
+                      </motion.p>
+                    )}
+                  </AnimatePresence>
                 </div>
-                <span className="text-lg font-bold tracking-wide text-zinc-400 relative z-10">
+
+                <span
+                  className={`text-lg font-bold tracking-wide relative z-10 transition-colors duration-300 ${
+                    openCards.nhacPhu ? "text-[#393ADD]" : "text-zinc-400"
+                  }`}
+                >
                   NÚI RỪNG
                 </span>
               </div>
 
-              {/* THẺ 2: SÔNG NƯỚC (Giữ viền highlight làm điểm nhấn trung tâm) */}
-              <div className="relative h-[360px] rounded-2xl overflow-hidden border border-[#393ADD]/40 bg-zinc-900/50 p-6 flex flex-col justify-between group">
-                <div className="absolute inset-0 bg-[url('/phong-canh-song.jpg')] bg-cover bg-center opacity-10 mix-blend-luminosity transition-opacity duration-500 group-hover:opacity-20 pointer-events-none" />
+              {/* THẺ 2: SÔNG NƯỚC */}
+              <div
+                onClick={() => toggleCard("thoaiPhu")}
+                className={`relative h-[360px] rounded-2xl overflow-hidden border p-6 flex flex-col justify-between cursor-pointer select-none transition-all duration-500 ${
+                  openCards.thoaiPhu
+                    ? "border-[#393ADD] bg-zinc-900/60"
+                    : "border-zinc-900 bg-zinc-900/20 hover:border-zinc-800"
+                }`}
+              >
+                <div
+                  className={`absolute inset-0 bg-[url('/phong-canh-song.jpg')] bg-cover bg-center transition-all duration-500 pointer-events-none ${
+                    openCards.thoaiPhu
+                      ? "opacity-10 mix-blend-luminosity"
+                      : "opacity-40"
+                  }`}
+                />
+
                 <div className="relative z-10 space-y-3">
-                  <span className="text-xs font-bold text-[#393ADD] tracking-widest uppercase">
+                  <span className="text-xs font-bold text-[#393ADD] tracking-widest uppercase block">
                     Thoải Phủ
                   </span>
-                  <p className="text-zinc-300 text-xs md:text-sm leading-relaxed text-justify">
-                    Gắn liền với miền sông nước (Mẫu Thoải). Trong tư duy triết
-                    học vũ trụ luận dân gian, nguồn nước không chỉ phục vụ nền
-                    văn minh lúa nước mà còn là biểu tượng của sự gột rửa, tái
-                    sinh và dòng chảy sinh mệnh tuần hoàn.
-                  </p>
+
+                  <AnimatePresence mode="wait">
+                    {openCards.thoaiPhu && (
+                      <motion.p
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        transition={{ duration: 0.3 }}
+                        className="text-zinc-300 text-xs md:text-sm leading-relaxed text-justify"
+                      >
+                        Gắn liền với miền sông nước (Mẫu Thoải). Trong tư duy
+                        triết học vũ trụ luận dân gian, nguồn nước không chỉ
+                        phục vụ nền văn minh lúa nước mà còn là biểu tượng của
+                        sự gột rửa, tái sinh và dòng chảy sinh mệnh tuần hoàn.
+                      </motion.p>
+                    )}
+                  </AnimatePresence>
                 </div>
-                <span className="text-lg font-bold tracking-wide text-[#393ADD] relative z-10">
+
+                <span
+                  className={`text-lg font-bold tracking-wide relative z-10 transition-colors duration-300 ${
+                    openCards.thoaiPhu ? "text-[#393ADD]" : "text-zinc-400"
+                  }`}
+                >
                   SÔNG NƯỚC
                 </span>
               </div>
 
               {/* THẺ 3: LÀNG QUÊ / ĐẤT ĐAI */}
-              <div className="relative h-[360px] rounded-2xl overflow-hidden border border-zinc-900 bg-zinc-900/20 p-6 flex flex-col justify-between group">
-                <div className="absolute inset-0 bg-[url('/phong-canh-lang-que.jpg')] bg-cover bg-center opacity-10 mix-blend-luminosity transition-opacity duration-500 group-hover:opacity-20 pointer-events-none" />
+              <div
+                onClick={() => toggleCard("diaPhu")}
+                className={`relative h-[360px] rounded-2xl overflow-hidden border p-6 flex flex-col justify-between cursor-pointer select-none transition-all duration-500 ${
+                  openCards.diaPhu
+                    ? "border-[#393ADD] bg-zinc-900/60"
+                    : "border-zinc-900 bg-zinc-900/20 hover:border-zinc-800"
+                }`}
+              >
+                <div
+                  className={`absolute inset-0 bg-[url('/phong-canh-lang-que.jpg')] bg-cover bg-center transition-all duration-500 pointer-events-none ${
+                    openCards.diaPhu
+                      ? "opacity-10 mix-blend-luminosity"
+                      : "opacity-40"
+                  }`}
+                />
+
                 <div className="relative z-10 space-y-3">
-                  <span className="text-xs font-bold text-[#393ADD] tracking-widest uppercase">
+                  <span className="text-xs font-bold text-[#393ADD] tracking-widest uppercase block">
                     Địa Phủ / Thiên Phủ
                   </span>
-                  <p className="text-zinc-300 text-xs md:text-sm leading-relaxed text-justify">
-                    Gắn liền với đất đai và vòm trời. Đây là lời khẳng định con
-                    người không tách rời thế giới tự nhiên, tồn tại trong mối
-                    quan hệ phụ thuộc lẫn nhau, từ đó hình thành nên thái độ
-                    sống biết ơn, ứng xử hài hòa và tôn trọng môi trường.
-                  </p>
+
+                  <AnimatePresence mode="wait">
+                    {openCards.diaPhu && (
+                      <motion.p
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        transition={{ duration: 0.3 }}
+                        className="text-zinc-300 text-xs md:text-sm leading-relaxed text-justify"
+                      >
+                        Gắn liền với đất đai và vòm trời. Đây là lời khẳng định
+                        con người không tách rời thế giới tự nhiên, tồn tại
+                        trong mối quan hệ phụ thuộc lẫn nhau, từ đó hình thành
+                        nên thái độ sống biết ơn, ứng xử hài hòa và tôn trọng
+                        môi trường.
+                      </motion.p>
+                    )}
+                  </AnimatePresence>
                 </div>
-                <span className="text-lg font-bold tracking-wide text-zinc-400 relative z-10">
+
+                <span
+                  className={`text-lg font-bold tracking-wide relative z-10 transition-colors duration-300 ${
+                    openCards.diaPhu ? "text-[#393ADD]" : "text-zinc-400"
+                  }`}
+                >
                   LÀNG QUÊ / ĐẤT ĐAI
                 </span>
               </div>
@@ -125,7 +231,7 @@ export function PhilosophySection() {
 
             <div className="p-8 rounded-2xl border border-zinc-900 bg-zinc-900/30 flex items-center">
               <p className="text-zinc-300 text-sm md:text-base leading-relaxed text-justify">
-                Trong nhiều tôn giáo hoặc hệ tư tưởng, hình ảnh nam thần, vua
+                Trong many tôn giáo hoặc hệ tư tưởng, hình ảnh nam thần, vua
                 trời, đấng cha thường giữ vai trò trung tâm. Nhưng trong đạo Mẫu
                 Việt Nam, hình tượng người Mẹ thiêng liêng lại giữ vị trí rất
                 quan trọng.
